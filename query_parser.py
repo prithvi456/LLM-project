@@ -1,7 +1,7 @@
 from groq import Groq
 import json
 
-client = Groq(api_key="your api key")
+client = Groq(api_key="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")
 
 def parse_query(text):
     prompt = f"""
@@ -39,3 +39,4 @@ Respond ONLY with JSON like this (no explanation, no markdown):
         print("\n⚠️ LLM response could not be parsed as JSON.")
         print("Raw response from Groq:\n", output)
         return {"error": "Failed to parse query", "raw_response": output}
+
