@@ -31,5 +31,5 @@ The system combines **document parsing**, **semantic search**, and **Large Langu
 
 ---
 
-## 📂 Project Structure
+
 
