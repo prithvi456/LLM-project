@@ -1,6 +1,11 @@
 from groq import Groq
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
-client = Groq(api_key="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")
+# Access the API key
+API_KEY = os.getenv("API_KEY")
+client = Groq(api_key=API_KEY)
 
 def evaluate_decision(query_info, retrieved_clauses):
     prompt = f"""
@@ -23,4 +28,3 @@ Answer in this JSON format:
         temperature=0  # Ensures consistent response
     )
     return response.choices[0].message.content
-
