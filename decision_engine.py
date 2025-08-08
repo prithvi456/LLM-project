@@ -1,6 +1,6 @@
 from groq import Groq
 
-client = Groq(api_key="your api key")
+client = Groq(api_key="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")
 
 def evaluate_decision(query_info, retrieved_clauses):
     prompt = f"""
@@ -23,3 +23,4 @@ Answer in this JSON format:
         temperature=0  # Ensures consistent response
     )
     return response.choices[0].message.content
+
